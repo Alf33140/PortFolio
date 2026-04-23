@@ -1,127 +1,126 @@
 @import 'tailwindcss';
 
-@theme{
-  --colorBackground: skyblue;
-  --colorForeground: white;
+@theme {
+  /* Correction : Nomenclature constante (tout avec tirets) */
+  --color-background: skyblue;
+  --color-foreground: white;
+  --color-card: #17a849; /* Ajout du point-virgule */
 
-  --colorCard: #17a849
-
-  --color-primary: #007FFF;
+  --color-primary: #E1220C;
   --color-primary-foreground: #ffffff;
 
-  --color-secondary: #1f2830;
-  --color-secondary-foreground: #2A3291;
+  --color-secondary: s #26C4EC; /* Suppression du double ;; */
+  --color-secondary-foreground: #ffffff;
 
   --color-muted: #252e37;
-  --color-muted-foreground: #1560BD;
+  --color-muted-foreground: #ffffff;
 
   --color-border: #242b32;
 
   --radius: 0.75rem;
 
-  --color-highlight: #f5a623;
-  --color-surface: #2A3291;
+  --color-highlight: #ffffff;
+  --color-surface: #56739A;
 }
-@layer base{
-  html{
+
+@layer base {
+  html {
     scroll-behavior: smooth;
   }
-  body{
-    background-color: var(--color-Background);
-    color: var(--color-Foreground);
+  body {
+    /* Utilisation des variables corrigées */
+    background-color: var(--color-background);
+    color: var(--color-foreground);
     font-family: 'Inter', sans-serif;
   }
   .font-serif {
-    font-family:'Playfair Display', serif;
+    font-family: 'Playfair Display', serif;
   }
 }
+
 @layer components {
   .glass {
-    background-color:color-mix(in srgb, var(--color-surface) 50%, transparent);
+    background-color: color-mix(in srgb, var(--color-surface) 50%, transparent);
     backdrop-filter: blur(16px);
     border: 1px solid color-mix(in srgb, var(--color-border) 50%, transparent);
   }
-  .glass-strong{
+  .glass-strong {
     background-color: color-mix(in srgb, var(--color-surface) 80%, transparent);
-    backdrop-filter:blur(24px);
-    border: 1px solid color-mix(in srgb, var(--color-border) 60% transparent);
+    backdrop-filter: blur(24px);
+    /* Correction : virgule manquante avant transparent */
+    border: 1px solid color-mix(in srgb, var(--color-border) 60%, transparent);
   }
-  .glow-text{
-    text-shadow: 0 0 30px
-    color-mix(insrgb, var(--color-primary) 50%, transparent);
+  .glow-text {
+    /* Correction : Syntaxe color-mix et concaténation */
+    text-shadow: 0 0 30px color-mix(in srgb, var(--color-primary) 50%, transparent);
   }
 }
-@layer utilities{
-  @keyframes fade-in{
-    from{
+
+@layer utilities {
+  @keyframes fade-in {
+    from {
       opacity: 0;
       transform: translateY(20px);
       filter: blur(10px);
     }
-    to{
+    to {
       opacity: 1;
       transform: translateY(0);
       filter: blur(0);
     }
   }
+  
   .animate-fade-in {
     animation: fade-in 0.8s ease-out both;
   }
-  .animate-delay-100 {
-    animation-delay: 0.1s;
-  }
-  .animate-delay-200 {
-    animation-delay: 0.2s;
-  }
-  .animate-delay-300 {
-    animation-delay: 0.3s;
-  }
-  .animate-delay-400 {
-    animation-delay: 0.4s;
-  }
-  .animate-delay-500 {
-    animation-delay: 0.5s;
-  }
-  .animate-delay-600 {
-    animation-delay: 0.6s;
-  }
-  .animate-delay-800 {
-    animation-delay: 0.8s;
-  }
-}
-
-  @keyframes slow-drift {
-    0%,
-    100% {
-     transform: translate(0, 0);
-    }
-    25% {
-     transform: translate(20px, -30px); 
-    }
-    50% {
-     transform: translate(-15px, 20px); 
-    }
-    75% {
-     transform: translate(30px, 10px); 
-    }
-}
-
-  @keyframes animated-border {
-    0% {
-      stroke-dashoffset: 400;
-    }
-    100% {
-      stroke-dashoffset: -550;
-    }
-  }
-    .group:hover .animated-border-path {
-      animation: animated-border 1.5s linear infinite;
-    }
-    .animated-hover:hover {
-      background-color: color-mix(in srgb, #26c4b8 15%, transparent);
-      backdrop-filter: blur(16px);
-      box-shadow: 0 0 20px color-mix (in srgb, #26c4b8 20%, transparent);
-    }
-   
   
+  /* Delays */
+  .animate-delay-100 { animation-delay: 0.1s; }
+  .animate-delay-200 { animation-delay: 0.2s; }
+  .animate-delay-300 { animation-delay: 0.3s; }
+  .animate-delay-400 { animation-delay: 0.4s; }
+  .animate-delay-500 { animation-delay: 0.5s; }
+  .animate-delay-600 { animation-delay: 0.6s; }
+  .animate-delay-800 { animation-delay: 0.8s; }
+}
 
+/* Animations globales */
+@keyframes slow-drift {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(20px, -30px); }
+  50% { transform: translate(-15px, 20px); }
+  75% { transform: translate(30px, 10px); }
+}
+
+@keyframes animated-border-draw {
+  from {
+    stroke-dashoffset: 400; /* Longueur totale du chemin */
+  }
+  to {
+    stroke-dashoffset: 0;   /* Arrivée : le trait a fait le tour */
+  }
+}
+
+/* On applique l'effet uniquement quand on survole le groupe (le bouton) */
+.group:hover .animated-border-path {
+  /* 1. L'animation : un cycle complet toutes les 1.8 secondes */
+  animation: animated-border-draw 1.8s linear infinite;
+  
+  /* 2. LE HALO BLANC :
+     On combine deux drop-shadows :
+     - Un premier précis (blur 3px) pour le cœur de la ligne.
+     - Un deuxième très diffus (blur 12px) pour le halo large.
+  */
+  filter: 
+    
+    drop-shadow(0 0 12px rgba(255, 255, 255, 0.6));
+}
+.animated-hover:hover {
+  background-color: color-mix(in srgb, #26c4b8 15%, transparent);
+  backdrop-filter: blur(16px);
+  /* Correction : suppression de l'espace après color-mix */
+  box-shadow: 0 0 20px color-mix(in srgb, #26c4b8 20%, transparent);
+  stroke: rgba(255, 255, 255, 0.3); 
+  transition: stroke 0.3s ease;
+
+}

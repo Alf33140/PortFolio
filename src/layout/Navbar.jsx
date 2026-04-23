@@ -38,9 +38,9 @@ export const Navbar = () => {
           </div>
         </nav>
         {/* CTA Button */}
-            <div className="hidden md:block">
+            {/* <div className="hidden md:block">
                 <Button size='sm'>Contactez-moi</Button>
-            </div> 
+            </div>  */}
               {/* Mobile Nav - Hamburger menu */}
               <button 
                 className="md:hidden p-2 text-foreground cursor-pointer"
@@ -60,7 +60,9 @@ export const Navbar = () => {
                         {link.label}
                       </a>
                   ))}
-                   <Button>Contactez-moi</Button>
+                   <div className="hidden md:block flex gap-4 items-center">
+                <Button size='sm'>Contactez-moi</Button>
+            </div>
                 </div>
           </div>
 

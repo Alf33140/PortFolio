@@ -7,15 +7,14 @@ export const Hero = () => {
     return (
     
     <section className="relative min-h-screen flex items-center overflow-hidden">
-        {/* background */} 
+      
+      {/* background */} 
         <div className="absolute inset-0">
             <img src="/bg-Github.png"
-            alt="Image de fond Github" 
-            className="w-full h-full object-cover opacity-40"
+                alt="Image de fond Github" 
+                className="w-full h-full object-cover opacity-40"
             />
-            <div className=" absolute inset-0 bg-gradient-to-be
-                    from-background/20 via-backbackground/80 to-background"
-            />
+            <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/80 to-background" />
         </div>
         {/* Carré type repo github
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -54,7 +53,7 @@ export const Hero = () => {
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     {/*Colonne de Gauche contenu textuel*/}
                     <div className="space-y-8">
-                        <div className="animate-fate-in">
+                        <div className="animate-fade-in">
                             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
                                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
                                     Software
@@ -72,21 +71,27 @@ export const Hero = () => {
                                 </span>
                             </h1>
                             <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animate-delay-800">
-                                Bonjour, je m'appelle Davy Carreau - je vous aide a faire naitre, structurer et developper 
-                                vos idées afin qu'elles prennent vie sur des applications de tout secteurs industriels, sanitaires ou jeux web communautaires.
+                                  - Je vous aiderai à structurer et developper vos idées afin qu'elles prennent vie 
+                                  et devienne vos outils adaptés à votre activité. Quel que soit secteur, qu'il soit 
+                                  industriel, sanitaire ou culturel, nous pourrons trouver vos outils spécifiques qui 
+                                  repondent a vos problématiques. 
+                                <p>ALORS PRET A FAIRE ECLORE VOS IDEES ENSEMBLE?</p>
                             </p>
+                            
                         </div>
                         {/* Bouton d'appel à l'action*/}
-                        <div>
+                        <div className="flex flex-wrap items-center gap-6 animate-fade-in animation-delay-800">
                             <Button 
                                 href="#contact"
                                 size="lg"
                                 className="animate-fade-in animation-delay-800"
                             >
                                 Contactez-moi <ArrowRight className="w-5 h-5" />
-                            </Button>
-                            <AnimatedBorderButton />
+                            </Button>  
+                          
+                            <AnimatedBorderButton /> 
                         </div>
+                       
                     </div>
                     {/*Colonne de droite image */}
                 </div>
