@@ -3,34 +3,125 @@
 @theme{
   --colorBackground: skyblue;
   --colorForeground: white;
-  --colorCard: #7a8491
-  --color-primary: #20b2a6;
+
+  --colorCard: #17a849
+
+  --color-primary: #007FFF;
   --color-primary-foreground: #ffffff;
 
   --color-secondary: #1f2830;
-  --color-secondary-foreground: #20b2a6;
+  --color-secondary-foreground: #2A3291;
 
   --color-muted: #252e37;
-  --color-muted-foreground: #7a8491;
+  --color-muted-foreground: #1560BD;
 
   --color-border: #242b32;
 
   --radius: 0.75rem;
 
   --color-highlight: #f5a623;
-  --color-surface: #1a2329
+  --color-surface: #2A3291;
 }
 @layer base{
   html{
     scroll-behavior: smooth;
   }
   body{
-    background-color: var(--colorBackground);
-    color: var(--colorForeground);
+    background-color: var(--color-Background);
+    color: var(--color-Foreground);
     font-family: 'Inter', sans-serif;
   }
   .font-serif {
     font-family:'Playfair Display', serif;
   }
 }
+@layer components {
+  .glass {
+    background-color:color-mix(in srgb, var(--color-surface) 50%, transparent);
+    backdrop-filter: blur(16px);
+    border: 1px solid color-mix(in srgb, var(--color-border) 50%, transparent);
+  }
+  .glass-strong{
+    background-color: color-mix(in srgb, var(--color-surface) 80%, transparent);
+    backdrop-filter:blur(24px);
+    border: 1px solid color-mix(in srgb, var(--color-border) 60% transparent);
+  }
+  .glow-text{
+    text-shadow: 0 0 30px
+    color-mix(insrgb, var(--color-primary) 50%, transparent);
+  }
+}
+@layer utilities{
+  @keyframes fade-in{
+    from{
+      opacity: 0;
+      transform: translateY(20px);
+      filter: blur(10px);
+    }
+    to{
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0);
+    }
+  }
+  .animate-fade-in {
+    animation: fade-in 0.8s ease-out both;
+  }
+  .animate-delay-100 {
+    animation-delay: 0.1s;
+  }
+  .animate-delay-200 {
+    animation-delay: 0.2s;
+  }
+  .animate-delay-300 {
+    animation-delay: 0.3s;
+  }
+  .animate-delay-400 {
+    animation-delay: 0.4s;
+  }
+  .animate-delay-500 {
+    animation-delay: 0.5s;
+  }
+  .animate-delay-600 {
+    animation-delay: 0.6s;
+  }
+  .animate-delay-800 {
+    animation-delay: 0.8s;
+  }
+}
+
+  @keyframes slow-drift {
+    0%,
+    100% {
+     transform: translate(0, 0);
+    }
+    25% {
+     transform: translate(20px, -30px); 
+    }
+    50% {
+     transform: translate(-15px, 20px); 
+    }
+    75% {
+     transform: translate(30px, 10px); 
+    }
+}
+
+  @keyframes animated-border {
+    0% {
+      stroke-dashoffset: 400;
+    }
+    100% {
+      stroke-dashoffset: -550;
+    }
+  }
+    .group:hover .animated-border-path {
+      animation: animated-border 1.5s linear infinite;
+    }
+    .animated-hover:hover {
+      background-color: color-mix(in srgb, #26c4b8 15%, transparent);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 0 20px color-mix (in srgb, #26c4b8 20%, transparent);
+    }
+   
+  
 
