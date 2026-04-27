@@ -95,6 +95,59 @@ export const Hero = () => {
                     </div>
                     {/*Colonne de droite image */}
                 </div>
+                {/* Réseau Sociaux */}
+                <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
+                    <span classname="text-sm text-muted-foreground">Suivez-moi: </span>
+                    {[
+                        {icon: Github, href: "https://github.com/Alf33140 "},
+                        {
+                         icon: linkedin,
+                         href: "https://www.linkedin.com/in/davy-carreau-b015453b9",   
+                        },
+                        {icon: Twitter, href:"#" },
+                    ].map((social, i) => (
+                        <a
+                            key={i}
+                            href={social.href}
+                            className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300"
+                        >
+                            {<social.icon className="w-5 h-5" />}
+                        </a>
+                    ))}
+
+                </div>
+            </div>
+            {/* Colonne de droite image profil*/}
+            <div className="relative animate-fade_in animation-delai-300">
+                {/* Image de profil */}
+                    <div className="relative max-w-md mx-auto">
+                        <div
+                            className="absolute inset-0 rounded-3x1 bg-linear-to-br
+                            from-primary/30 via-transparent to primary/10
+                            blur-2x1 animate-pulse"
+                        />
+                        <div className="relative glass rounded-3x1 p-2 glow-border">
+                            <img 
+                                src="/Alf.png" 
+                                alt="Photo de profil"
+                                className="w-full aspect-[4/5] object-cover rounded-2x1"
+                            />
+                            {/* Badge Flottant */}
+                                <div classname="absolute -bottom-4 -right-4 glass rounded-x1 px-4 py-3 animate-float">
+                                    <div classname="flex items-center gap-3">
+                                        <div className="w-3 h-3 bg-blue-500 rounded-full animate-pulse"/> 
+                                        <span classname="text-sm font-medium">
+                                            Disponible pour de nouvelles opportunités
+                                        </span>
+                                    </div>
+                                </div>
+                            {/* Stats du Badge */}
+                            <div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
             </div>
     </section>
     );
