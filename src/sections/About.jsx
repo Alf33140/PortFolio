@@ -53,28 +53,18 @@ export const About = () => {
                         </h2>
                         <div className="space-y-4 text-muted-foreground animate-fade-in animattion-delay-200">
                             <p>
-                                Le monde est en perpétuels changement, cependant le besoin de donner corps à ses idées 
-                                pour simplifier son qhotidien tout en répondant aux normes de traçabilité réglementaire.
-                                Ces idées trouvent rarement de réponses adaptées avec les programmes disponible sur étagère.
-                                En tant qu'ancien professionnel du segment logistique et opérationnel. je me suis attaché a
-                                 me former en conception développent d'applications afin de répondre à cette question:
-                                 Comment répondre de manière complête et réglementaire à mon secteur d'activité encréant un 
-                                 adapté a mes besoins tout comme a ceux de mes utilisateurs. 
+                                Le monde est en perpétuel changement, cependant le besoin de donner corps à ses idées pour simplifier son qhotidien tout en répondant aux normes de traçabilité réglementaire reste indispensable. Ces idées trouvent rarement de réponses adaptées avec les programmes disponibles sur étagère. En tant qu'ancien professionnel du segment logistique et opérationnel, je me suis attaché a me former en conception développement d'applications afin de répondre à cette question:
+                                 Comment répondre de manière complête, réglementaire et adaptée à mon secteur d'activité en créant un outil qui répods à mes besoins tout comme à ceux de mes utilisateurs. 
                             </p>
                             <p>
                                 Je me suis spécialisé en symfony, React, Javascript et HTML5/CSS3/SQL qui permettent de par leur 
                                 technicité des constructions d'applications stables, dotées de bases de données associées pour 
-                                l'ensemble des secteurs d'activités simples ou complexes san pour autant faire l'impasse sur 
-                                l'ergonomie et l'intuitivité de navigation. 
+                                l'ensemble des secteurs d'activités, qu'ils soient dans un environnement simple ou complexe sans pour autant faire l'impasse sur l'ergonomie et l'intuitivité de navigation. 
                             </p>
                         </div>
                         <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-dely-300">
                             <p className="text-lg font-medium italic text-foreground">
-                                Mon experience associé de 25 ans au sein de domaines 
-                                d'activités logistiques commme le secteur sanitaires sur les volets techniques en hôpital, mais 
-                                également sur les secteurs de resptauration hospitalière, de gestions de l'hébergement, les gestions 
-                                de parc de véhicules. Cette expertise et mon écoute est à votre service pour faire éclore les futures 
-                                solutions à votre problématiques.
+                                Mon experience associé de 25 ans au sein de domaines d'activités logistiques commme le secteur sanitaires sur les volets techniques en hôpital, mais également sur les secteurs de restauration hospitalière, de gestion de l'hébergement, les gestions de parc de véhicules. Cette expertise et mon écoute est à votre service pour faire éclore les futures solutions à vos problématiques.
                             </p>
                         </div>
                 </div>
