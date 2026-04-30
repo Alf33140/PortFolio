@@ -36,7 +36,11 @@ import { Download } from "lucide-react";
 
 export const AnimatedBorderButton = () => {
   return (
-    <button className="relative group px-8 py-4 text-lg font-medium rounded-full overflow-visible transition-all duration-300 bg-[#dc2626] text-white border-none hover:bg-[#b91c1c] hover:shadow-[0_0_20px_rgba(220,38,38,0.5)]">
+    <a 
+      href="/Cv_Davy_Carreau.pdf" // Chemin vers ton fichier dans le dossier public
+      download="Cv_Davy_Carreau.pdf" // Force le téléchargement et nomme le fichier
+      className="relative group px-8 py-4 text-lg font-medium rounded-full overflow-visible transition-all duration-300 bg-[#dc2626] text-white border-none hover:bg-[#b91c1c] hover:shadow-[0_0_20px_rgba(220,38,38,0.5)] inline-flex items-center justify-center no-underline"
+    >
       
       {/* SVG : La ligne blanche mobile */}
       <svg
@@ -60,6 +64,6 @@ export const AnimatedBorderButton = () => {
         <Download className="w-5 h-5" />
         Télécharger mon CV
       </span>
-    </button>
+    </a>
   );
 };

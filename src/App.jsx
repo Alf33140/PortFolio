@@ -5,26 +5,24 @@ import {Projects} from "./sections/Projects";
 import {Contact} from "./sections/Contact";
 import {Testimonials} from "./sections/Testimonials";
 import {About} from "./sections/About";
-
-
+import {Footer} from "./layout/footer";
+import { IoLogoGithub, IoLogoLinkedin, IoLogoTwitter } from "react-icons/io";
 
 function App() {
-
 
   return (
     <>
       <div className="min-h-screen overflow-x-hidden">
         <Navbar />
         <main>
-          
           <Hero />
           <About />
           <Projects />
           <Experience />
           <Testimonials />
           <Contact />
-
         </main>
+        <Footer />
       </div>
     </>
   )

@@ -94,10 +94,10 @@ export const Contact = () => {
                 
                 {/* --- HEADER DE LA SECTION --- */}
                 <div className="text-center mx-auto mb-16">
-                    <span className="text-secondary-foreground text-sm font-medium">Une idée,</span>
+                    <span className="text-secondary-foreground text-sm font-medium">Contact</span>
                     <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in">
-                        un concept de projet,{" "}
-                        <span className="font-serif italic font-normal text-white">faisons le éclore ensemble !</span>
+                        Une idée? Un projet?{" "}
+                        <span className="font-serif italic font-normal text-white">Parlons-en ensemble !</span>
                     </h2>
                 </div>
 

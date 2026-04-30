@@ -11,7 +11,7 @@ const experience = [
     {
         period: "09/2024 - 02/2026",
         role: "Chef de Pôle logistique",
-        company: "Groupement de soutien du Commissariat de Cazaux-Biscarosse Base Aérienne 120",
+        company: "Groupement de Soutien du Commissariat de Cazaux-Biscarosse Base Aérienne 120",
         description: "Responsable des moyens techniques et logistiques du groupement de défense Sud-ouest",
         technologies: ["Conduite du changement", "Gestion des services techniques opérationnels et moyens humains", "Gestion de projet, Innovation"],
         current: true, // Indicateur pour l'animation de point actif
@@ -21,31 +21,47 @@ const experience = [
         role: "Chef du Sous-groupement logistique",
         company: "Bataillon de Marin-Pompiers de Marseille",
         description: "Responsable logistique, Pilote budgétaire logistique opérationnelle et Chef de Projet Numérique Logistique",
-        technologies: ["Transition numérique", "Recherche" , "Conception et déploiement des solutions KIMOCE (OSLO) adaptés au secteur logistique", "gestion de projet numérique", "Création des cahiers des charges techniques et Pilotage"],
+        technologies: ["Transition numérique", "Recherche" , "Conception et déploiement des solutions KIMOCE (OSLO) adaptées au secteur logistique", "gestion de projet numérique", "Création des cahiers des charges techniques et Pilotage"],
         current: true, // Indicateur pour l'animation de point actif
     },
     {
         period: "09/2019 - 09/2022",
         role: "Directeur des services techniques logistique",
-        company: "HHôpital d'instruction des armées ROBERT PIQUE",
+        company: "Hôpital d'instruction des armées ROBERT PIQUE",
         description: "Chef de département logistique, Management de la politique de maintenance et des équipes techniques de l'hôpital(Ingénierie Biomédical,Infrastructure, Moyens généraux,Hébergement et Restauration Hospitalière",
         technologies: ["Transition numérique"," Gestion de la maintenance technique", "Gestion de projet infrastructure", "Création des cahiers des charges techniques et Pilotage"],
         current: true, // Indicateur pour l'animation de point actif
     },
     {
         period: "09/2017 - 09/2019",
-        role: "Chef de service restauration Hospitalière",
+        role: "Chef de service restauration hospitalière",
         company: "Hôpital d'instruction des armées LAVERAN",
         description: "Conduite du changement, Gestion de projet transformation de l'activité de restauration, Gestion des flux ",
-        technologies: ["Gestion de projet", "Création des cahiers des charges techniques et Pilotage"],
+        technologies: ["Conduite du changement", "Gestion de projet", "Création des cahiers des charges techniques et Pilotage"],
         current: true, // Indicateur pour l'animation de point actif
     },
     {
         period: "09/2015 - 09/2017",
         role: "Directeur des services techniques logistique",
         company: "Hôpital d'instructiondes armées PERCY",
-        description: "Chef de département logistique, Management de la politique de maintenance et des équipes techniques de l'hôpital(Ingénierie Biomédical,Infrastructure, Moyens généraux,Hébergement et Restauration Hospitalière",
+        description: "Chef de département logistique, Management de la politique de maintenance et des équipes techniques de l'hôpital(Ingénierie Biomédicale,Infrastructure, Moyens généraux,Hébergement et Restauration Hospitalière",
         technologies: ["Transition numérique", "Gestion de la maintenance technique", "Gestion de projet infrastructure", "Création des cahiers des charges techniques et Pilotage"],
+        current: true, // Indicateur pour l'animation de point actif
+    },
+    {
+        period: "09/2012 - 09/2015",
+        role: "Chef de Service d'Ingénierie Biomédicale",
+        company: "Hôpital d'instructiondes armées LEGOUEST",
+        description: "Chef de service de Maintenance et de Gestion du parc de dispositifs médicaux de l'hôpital, Management de la politique de maintenance et des équipes techniques spécialisées de l'hôpital",
+        technologies: ["Gestion de la maintenance technique", "Programmation des investissements", "Création des cahiers des charges techniques et Pilotage"],
+        current: true, // Indicateur pour l'animation de point actif
+    },
+    {
+        period: "09/2009 - 09/2012",
+        role: "Chef de Service d'Ingénierie en Recherche Biomédicale",
+        company: "Institut de Recherche Biomédicale des Armées",
+        description: "Chef de service de Maintenance et de Gestion du parc de dispositifs médicaux de l'hôpital, Management de la politique de maintenance et des équipes techniques spécialisées de l'hôpital",
+        technologies: ["Conduite du changement","Gestion de la maintenance technique de 4 établissements de recherche", "Programmation des investissements", "Création des cahiers des charges techniques et Pilotage"],
         current: true, // Indicateur pour l'animation de point actif
     },
 ];
@@ -57,7 +73,7 @@ export const Experience = () => {
            - relative : Référentiel pour les éléments positionnés en absolu (le halo de fond).
            - overflow-hidden : Empêche les effets visuels de créer une barre de défilement horizontale.
         */
-        <section id="expérience" className="py-32 relative overflow-hidden">
+        <section id="experience" className="py-32 relative overflow-hidden">
             
             {/* Halo de lumière en arrière-plan :
                 - absolute : Positionné par rapport à la section.
