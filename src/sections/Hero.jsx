@@ -131,7 +131,7 @@ export const Hero = () => {
                         </div>
                         <div className="space-y-4">
                             <h1 className="text-5xl lg:text-6xl font-bold leading-tight animate-fade-in">
-                                Developpeur <span className="text-primary glow-text">Fullstack</span><br />
+                                Logisticien et Developpeur <span className="text-primary glow-text">Fullstack</span><br />
                                 passionné par le code<br />
                                 <span className="font-serif italic font-normal">et les défis web</span>
                             </h1>
@@ -140,10 +140,10 @@ export const Hero = () => {
                             </p>
                         </div>
 
-                        <div className="flex flex-wrap items-center gap-6">
-                            <Button href="#contact" size="lg">
+                        <div className="flex justify-center flex-wrap items-center gap-6">
+                            {/* <Button href="#contact" size="lg">
                                 Contactez-moi <ArrowRight className="w-5 h-5" />
-                            </Button>  
+                            </Button>   */}
                             <AnimatedBorderButton> 
                                 <Download className="w-5 h-5"/>
                                 Download CV

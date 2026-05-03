@@ -128,7 +128,7 @@ export const Projects = () => {
                         Projets : <span className="font-serif italic font-normal text-white">qui font la différence</span>
                     </h2>
                     <p className="text-muted-foreground animate-fade-in animation-delay-200">
-                        Une sélection de mes travaux, illustrant mes compétences fullstack et ma capacité à résoudre des problèmes complexes.
+                        Une sélection de mes travaux illustrant mes compétences fullstack et ma capacité à résoudre des problèmes complexes.
                     </p>
                 </div>
 
