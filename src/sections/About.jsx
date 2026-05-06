@@ -81,7 +81,7 @@ export const About = () => {
                         
                         <div className="glass rounded-2xl p-8 glow-border group bg-white/5">
                             <p className="text-base md:text-lg font-medium italic text-foreground leading-relaxed">
-                                "Mon expertise de 25 ans en logistique sur différents secteurs qu'elle soit industrielle, hospitalière ou opérationnelle est à votre service 
+                                "Mon expertise de 25 ans en logistique sur différents secteurs qu'elle soit industrielle  hospitalière ou opérationnelle est à votre service 
                                 pour faire éclore les futures solutions à vos problématiques."
                             </p>
                         </div>

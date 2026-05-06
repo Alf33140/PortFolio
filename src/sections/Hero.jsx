@@ -153,7 +153,7 @@ export const Hero = () => {
                         <div className="flex items-center gap-4 pt-4">
                             <span className="text-sm text-white/60">Suivez-moi: </span>
                             {[
-                                {icon: IoLogoGithub , href: "https://github.com/Alf33140 "},
+                                {icon: IoLogoGithub , href: "#"},
                                 {icon: IoLogoLinkedin , href: "https://www.linkedin.com/in/davy-carreau-b015453b9"},
                                 {icon: IoLogoTwitter , href:"#" },
                             ].map((social, i) => (
