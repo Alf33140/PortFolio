@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from "@/components/button";
+import { Button } from "../components/button";
 import { ArrowRight, ChevronDown, Download } from "lucide-react";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
 import { IoLogoGithub, IoLogoLinkedin, IoLogoTwitter } from "react-icons/io";
