@@ -5,7 +5,7 @@ import {Projects} from "./sections/Projects";
 import {Contact} from "./sections/Contact";
 import {Testimonials} from "./sections/Testimonials";
 import {About} from "./sections/About";
-import {Footer} from "./layout/footer";
+import {Footer} from "./layout/Footer";
 import { IoLogoGithub, IoLogoLinkedin, IoLogoTwitter } from "react-icons/io";
 
 function App() {
